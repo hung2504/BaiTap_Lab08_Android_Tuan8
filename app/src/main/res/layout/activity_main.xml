@@ -5,14 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/edtAddName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Put name to add"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:background="#C4C4C4"
+        android:drawableLeft="@drawable/info"
+        android:paddingLeft="10dp"
+        android:drawablePadding="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"></EditText>
 
-    <TextView
+    <Button
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="20dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:backgroundTint="#208CC9"
+        android:background="#208CC9"
+        app:layout_constraintStart_toStartOf="@+id/edtAddName"
+        app:layout_constraintTop_toBottomOf="@id/edtAddName"></Button>
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Remove"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:backgroundTint="#208CC9"
+        android:background="#208CC9"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+       app:layout_constraintEnd_toStartOf="@id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@id/edtAddName"></Button>
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:backgroundTint="#208CC9"
+        android:background="#208CC9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtAddName"></Button>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

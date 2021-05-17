@@ -10,14 +10,14 @@ public class Name {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "name")
-    private String mName;
+    private String name;
 
     public Name(@NonNull String name){
-        this.mName = name;
+        this.name = name;
     }
 
     @NonNull
-    public String getmName() {
-        return mName;
+    public String getName() {
+        return name;
     }
 }
